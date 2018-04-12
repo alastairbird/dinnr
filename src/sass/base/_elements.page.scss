@@ -9,12 +9,12 @@ html {
   font-size: 62.5%; // [1]
   line-height: var(--base-line-height);
   font-family: var(--base-font-family);
-  background: var(--color-grey-bg);
   color: var(--color-base-text);
 }
 
 body {
   font-size: var(--base-font-size);
+  background: var(--color-grey-bg);
 }
 
 footer,

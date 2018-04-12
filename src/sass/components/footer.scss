@@ -3,16 +3,7 @@
 // ======================================================================
 @import "../base/settings";
 
-.header {
-	padding: calc(var(--gutter) * 2);
-	background: #2a2a2a;
-	display: flex;
+.footer {
+	color: #999;
+	text-align: center;
 }
-
-.logo {
-	width: 366px;
-	height: 80px;
-	display: block;
-	margin: auto;
-}
-

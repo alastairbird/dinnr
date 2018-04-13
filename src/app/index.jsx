@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
 import { Home } from './pages/Home.jsx';
-import { OtherPage } from './pages/OtherPage.jsx';
 
 require('../sass/base/base.scss')
 
@@ -13,7 +12,6 @@ const Main = () => (
   <section>
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path='/OtherPage' component={OtherPage}/>
     </Switch>
   </section>
 )

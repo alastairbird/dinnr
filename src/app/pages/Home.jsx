@@ -27,13 +27,30 @@ const foodArray = [
   "Leek risotto",
 ];
 
-export class Home extends React.Component {
+interface HomeProps extends React.Component {
+
+}
+
+interface HomeState extends React.Component {
+
+}
+
+export class Home extends React.Component<HomeProps, HomeState> {
+  
+  constructor(props) {
+    super(props);
+  }
+
+  gimmeTheFoodYo = () => {
+
+  }
+
   render () {
     return (
       <div className="">
-        <Link to="/food" className="button__base">
+        <button to="/food">
         	Eat this.
-        </Link>
+        </button>
       </div>
     );
   }

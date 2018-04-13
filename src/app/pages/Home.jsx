@@ -32,24 +32,44 @@ interface HomeProps extends React.Component {
 }
 
 interface HomeState extends React.Component {
-
+	hasPressedTheButton: boolean;
+	chosenFood: string;
 }
 
 export class Home extends React.Component<HomeProps, HomeState> {
   
   constructor(props) {
     super(props);
+    this.state = {
+    	hasPressedTheButton: false,
+    	chosenFood: ''
+    }
+  }
+
+  selectFood = () => {
+  	console.log('i am being called')
+  	this.setState({
+  		// foodArray[Math.random(foodArray.length)]
+  		chosenFood: 'bananas'
+  	}) 
   }
 
   gimmeTheFoodYo = () => {
-
+  	this.selectFood()
+  	this.setState ({
+  		hasPressedTheButton: true,
+  	})
   }
 
   render () {
     return (
-      <div className="">
-        <button to="/food">
-        	Eat this.
+      <div>
+      	<div>
+      			{this.state.chosenFood}
+      	</div>
+        <button to="/food" onClick={this.gimmeTheFoodYo}>
+        	{!this.state.hasPressedTheButton && <span>Eat this.</span>}
+        	{this.state.hasPressedTheButton && <span>Nah, not that</span>}
         </button>
       </div>
     );

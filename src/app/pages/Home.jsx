@@ -47,10 +47,8 @@ export class Home extends React.Component<HomeProps, HomeState> {
   }
 
   selectFood = () => {
-  	console.log('i am being called')
   	this.setState({
-  		// foodArray[Math.random(foodArray.length)]
-  		chosenFood: 'bananas'
+  		chosenFood: foodArray[Math.floor(Math.random() * Math.floor(foodArray.length))]
   	}) 
   }
 

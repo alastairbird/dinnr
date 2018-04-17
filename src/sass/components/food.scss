@@ -1,0 +1,10 @@
+// ======================================================================
+// Header component
+// ======================================================================
+@import "../base/settings";
+
+.food {
+	text-align: center;
+	font-size: 50px;
+	padding: var(--gutter) 0 calc(var(--gutter) * 3) 0;
+}

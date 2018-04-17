@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+const styles = require('../../sass/components/food.scss');
+
+
 const foodArray = [
   "Bimibap",
   "Pork tenderloin stir fry",
@@ -42,7 +45,7 @@ export class Home extends React.Component<HomeProps, HomeState> {
     super(props);
     this.state = {
     	hasPressedTheButton: false,
-    	chosenFood: ''
+    	chosenFood: '?'
     }
   }
 
@@ -62,7 +65,7 @@ export class Home extends React.Component<HomeProps, HomeState> {
   render () {
     return (
       <div>
-      	<div>
+      	<div className={styles.food}>
       			{this.state.chosenFood}
       	</div>
         <button to="/food" onClick={this.gimmeTheFoodYo}>

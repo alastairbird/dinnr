@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Header } from './Header.jsx';
-import { Footer } from './Footer.jsx';
 import { Home } from './pages/Home.jsx';
 
 require('../sass/base/base.scss')
@@ -23,7 +22,6 @@ class App extends React.Component {
       <div>
       	<Header/>
         <Main/>
-        <Footer/>
       </div>
     );
   }

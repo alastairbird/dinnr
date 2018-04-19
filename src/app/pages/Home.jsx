@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const styles = require('../../sass/components/food.scss');
-
+const styles = require('../../sass/components/home.scss');
 
 const foodArray = [
   "Bimibap",
   "Pork tenderloin stir fry",
-  "pork chop mushroom sauce ",
-  "Lemom m herb chicken thighs cous cous",
+  "Pork chop mushroom sauce ",
+  "Lemom n herb chicken thighs cous cous",
   "Chorizo kale risotto",
   "Quick turkey chilli",
   "Marckel avo smash",
@@ -18,13 +17,14 @@ const foodArray = [
   "Veggie sausage risotto",
   "Mush halloumi burger",
   "Anchovy  brocoli pasta",
-  "Oork ramen",
+  "Pork ramen",
   "Chicken tray bake",
-  "Ramen",
+  "Veg Ramen",
   "Chickpea n spimach tapas",
-  "Buurgers",
+  "Burgers",
   "Wings n sweet potato",
   "Chicken boursin bacon",
+  "Pizza",
   "White beans tomato reduction on toast",
   "Souvlaki pork and tzasiki pitta",
   "Leek risotto",
@@ -64,11 +64,13 @@ export class Home extends React.Component<HomeProps, HomeState> {
 
   render () {
     return (
-      <div>
+      <div className={styles.wrapper}>
+
       	<div className={styles.food}>
       			{this.state.chosenFood}
       	</div>
-        <button to="/food" onClick={this.gimmeTheFoodYo}>
+
+        <button className={styles.foodButton} to="/food" onClick={this.gimmeTheFoodYo}>
         	{!this.state.hasPressedTheButton && <span>Eat this.</span>}
         	{this.state.hasPressedTheButton && <span>Nah, not that</span>}
         </button>
